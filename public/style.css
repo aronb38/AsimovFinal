@@ -1,0 +1,47 @@
+/* style.css */
+
+/* Reset des marges et des paddings */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style de base pour la navigation */
+nav {
+    background-color: #333; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    padding: 10px 0; /* Espacement interne */
+}
+
+.navbar {
+    max-width: 1200px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 0 20px; /* Espacement interne des éléments de la navbar */
+}
+
+.navbar h1 {
+    font-size: 24px; /* Taille de la police */
+}
+
+.navbar ul {
+    list-style: none; /* Suppression des puces de liste */
+}
+
+.navbar ul li {
+    display: inline; /* Affichage en ligne des éléments de liste */
+    margin-right: 20px; /* Marge à droite pour espacer les éléments */
+}
+
+.navbar ul li:last-child {
+    margin-right: 0; /* Aucune marge à droite pour le dernier élément */
+}
+
+.navbar ul li a {
+    color: #fff; /* Couleur du texte des liens */
+    text-decoration: none; /* Suppression du soulignement des liens */
+    font-weight: bold; /* Texte en gras */
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline; /* Soulignement des liens au survol */
+}

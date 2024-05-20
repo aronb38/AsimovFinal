@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<% switch (role) { case 1: %>
+    <nav>
+        <div class="navbar">
+            <h1>Accueil Proviseur</h1>
+        </div>
+        <ul>
+            <li><a href="/proviseur/scolarite">Scolarité</a></li>
+            <li><a href="/logout">Déconnexion</a></li>
+        </ul>
+    </nav>
+<% break; case 2: %>
+    <nav>
+        <div class="navbar">
+            <h1>Accueil Enseignant</h1>
+        </div>
+        <ul>
+            <li><a href="/enseignant/scolarite">Scolarité</a></li>
+            <li><a href="/enseignant/projet">Projets</a></li>
+            <li><a href="/enseignant/stage">Stages</a></li>
+            <li><a href="/logout">Déconnexion</a></li>
+        </ul>
+    </nav>
+<% break; case 3: %>
+    <nav>
+        <div class="navbar">
+            <h1>Accueil Secretariat</h1>
+        </div>
+        <ul>
+            <li><a href="/secretariat/scolarite">Scolarité</a></li>
+            <li><a href="/secretariat/Saisirnotes">Notes</a></li>
+            <li><a href="/secretariat/stage">Stages</a></li>
+            <li><a href="/logout">Déconnexion</a></li>
+        </ul>
+    </nav>
+<% break; case 4: %>
+    <nav>
+        <div class="navbar">
+            <h1>Accueil Eleve</h1>
+        </div>
+        <ul>
+            <li><a href="/eleve/scolarite">Scolarité</a></li>
+            <li><a href="/eleve/projet">Projets</a></li>
+            <li><a href="/eleve/stage">Stages</a></li>
+            <li><a href="/logout">Déconnexion</a></li>
+        </ul>
+    </nav>
+<% break; default: %>
+    <nav>
+        <ul>
+            <li><a href="/login">Connexion</a></li>
+        </ul>
+    </nav>
+<% break; } %>
+
+</body>
+</html>
