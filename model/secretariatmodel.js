@@ -1,6 +1,6 @@
 const pool = require('../config/database');
 
-// ----------------------------------------------------------------------------------------------//
+
 //---------------------------------- BLOC SECRETARIAT SCOLARITE----------------------------------------//
 async function getEleves() {
     try {
@@ -44,9 +44,6 @@ async function affecterReferent(id_responsable, id_utilisateur) {
         throw err;
     }
 }
-
-// ----------------------------------------------------------------------------------------------//
-//---------------------------------- BLOC SECRETARIAT ....----------------------------------------//
 
 module.exports = {
     getEleves,

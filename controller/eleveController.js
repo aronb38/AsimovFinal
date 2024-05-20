@@ -2,7 +2,7 @@ const eleveModel = require('../model/eleveModels');
 
 const eleveController = {
 
-    // ----------------------------------------------------------------------------------------------//
+    
     //---------------------------------- BLOC ELEVE SCOLARITE----------------------------------------//
 
     async renderScolarite(req, res) {
@@ -21,30 +21,6 @@ const eleveController = {
             res.status(500).send("Une erreur s'est produite lors du chargement de la page de la scolarité.");
         }
     },
-
-    // ----------------------------------------------------------------------------------------------//
-    //---------------------------------- BLOC ELEVE STAGE----------------------------------------//
-
-    async renderStage(req, res) {
-        const role = req.session.role;
-        // AJOUTER MODEL ET DONNEES EN FONCTION DES BESOINS
-        res.render('stageEleve', { role });
-    },
-
-    // ----------------------------------------------------------------------------------------------//
-    //---------------------------------- BLOC ELEVE PROJET----------------------------------------//
-    async renderProjet(req, res) {
-        try {
-            const role = req.session.role;
-            const projets = await eleveModel.getProjet();
-            
-            res.render('projetEleve', { role , projets});
-        }
-        catch (error) {
-            console.error(error);
-            res.status(500).send("Une erreur s'est produite lors du chargement des projets.");
-        }
-    }
 
 };
 
